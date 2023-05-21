@@ -1,7 +1,7 @@
 <div class="container">
   <h1>{{ data[0]?.schemaName }}</h1>
   <div class="card">
-    <table class="table table-bordered table-stripped">
+    <table class="table table-bordered table-striped">
       <tbody>
         <tr>
           <td>
@@ -18,6 +18,8 @@
             <h2 class="heading">Delta</h2>
             <span class="data delta">{{ data[0]?.delta }}</span>
           </td>
+        </tr>
+        <tr>
           <td colspan="2">
             <h2 class="heading">Schema Name</h2>
             <span class="data schema-name">{{ data[0]?.schemaName }}</span>
@@ -26,10 +28,10 @@
         <tr>
           <td colspan="2">
             <h2 class="heading">Schema Category</h2>
-            <span class="data schema-category">{{
-              data[0]?.schemaCategory
-            }}</span>
+            <span class="data schema-category">{{ data[0]?.schemaCategory }}</span>
           </td>
+        </tr>
+        <tr>
           <td colspan="2">
             <h2 class="heading">Description</h2>
             <span class="data description">{{ data[0]?.description }}</span>
@@ -37,6 +39,6 @@
         </tr>
       </tbody>
     </table>
-    <button class="btn btn-outline-primary">Buy Now</button>
+    <a class="btn btn-outline-primary" :href="'/allfundsdetail/' + data[0]?.schemaName">Buy Now</a>
   </div>
 </div>
